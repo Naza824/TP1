@@ -12,42 +12,67 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDialog>
+#include <QtWidgets/QGridLayout>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
 
 class Ui_LogIn
 {
 public:
-    QLabel *label;
-    QLabel *label_2;
-    QLineEdit *Clave;
+    QWidget *gridLayoutWidget;
+    QGridLayout *gridLayout;
     QLineEdit *Usuario;
+    QLabel *label_2;
     QPushButton *IngresarBtn;
+    QLineEdit *Clave;
+    QLabel *label;
 
     void setupUi(QDialog *LogIn)
     {
         if (LogIn->objectName().isEmpty())
             LogIn->setObjectName("LogIn");
-        LogIn->resize(400, 300);
-        label = new QLabel(LogIn);
-        label->setObjectName("label");
-        label->setGeometry(QRect(160, 70, 49, 16));
-        label_2 = new QLabel(LogIn);
-        label_2->setObjectName("label_2");
-        label_2->setGeometry(QRect(170, 150, 49, 16));
-        Clave = new QLineEdit(LogIn);
-        Clave->setObjectName("Clave");
-        Clave->setGeometry(QRect(130, 190, 113, 22));
-        Clave->setEchoMode(QLineEdit::EchoMode::Password);
-        Usuario = new QLineEdit(LogIn);
+        LogIn->resize(581, 378);
+        gridLayoutWidget = new QWidget(LogIn);
+        gridLayoutWidget->setObjectName("gridLayoutWidget");
+        gridLayoutWidget->setGeometry(QRect(160, 100, 241, 141));
+        gridLayout = new QGridLayout(gridLayoutWidget);
+        gridLayout->setObjectName("gridLayout");
+        gridLayout->setContentsMargins(0, 0, 0, 0);
+        Usuario = new QLineEdit(gridLayoutWidget);
         Usuario->setObjectName("Usuario");
-        Usuario->setGeometry(QRect(130, 110, 113, 22));
-        IngresarBtn = new QPushButton(LogIn);
+
+        gridLayout->addWidget(Usuario, 2, 0, 1, 1);
+
+        label_2 = new QLabel(gridLayoutWidget);
+        label_2->setObjectName("label_2");
+
+        gridLayout->addWidget(label_2, 3, 0, 1, 1);
+
+        IngresarBtn = new QPushButton(gridLayoutWidget);
         IngresarBtn->setObjectName("IngresarBtn");
-        IngresarBtn->setGeometry(QRect(150, 240, 75, 24));
+
+        gridLayout->addWidget(IngresarBtn, 5, 0, 1, 1);
+
+        Clave = new QLineEdit(gridLayoutWidget);
+        Clave->setObjectName("Clave");
+        Clave->setEchoMode(QLineEdit::EchoMode::Password);
+
+        gridLayout->addWidget(Clave, 4, 0, 1, 1);
+
+        label = new QLabel(gridLayoutWidget);
+        label->setObjectName("label");
+        QSizePolicy sizePolicy(QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Preferred);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(label->sizePolicy().hasHeightForWidth());
+        label->setSizePolicy(sizePolicy);
+
+        gridLayout->addWidget(label, 0, 0, 1, 1);
+
 
         retranslateUi(LogIn);
 
@@ -57,9 +82,9 @@ public:
     void retranslateUi(QDialog *LogIn)
     {
         LogIn->setWindowTitle(QCoreApplication::translate("LogIn", "Dialog", nullptr));
-        label->setText(QCoreApplication::translate("LogIn", "Nombre", nullptr));
         label_2->setText(QCoreApplication::translate("LogIn", "Clave", nullptr));
         IngresarBtn->setText(QCoreApplication::translate("LogIn", "Ingresar", nullptr));
+        label->setText(QCoreApplication::translate("LogIn", "Nombre", nullptr));
     } // retranslateUi
 
 };

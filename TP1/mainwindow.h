@@ -19,7 +19,12 @@ public:
     ~MainWindow() override;
 
 private slots:
-    void on_LoginBtn_clicked();
+    /*void on_LoginBtn_clicked();
+    void habilitarInicioSesion();*/
+
+    void on_CambiarUsuarioBtn_clicked();
+
+    void on_CargaPaciente_clicked();
 
 private:
     Ui::MainWindow *ui;

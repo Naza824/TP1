@@ -15,6 +15,9 @@ public:
     explicit LogIn(QWidget *parent = nullptr);
     ~LogIn();
 
+signals:
+    void loginExitoso();
+
 private slots:
     void on_IngresarBtn_clicked();
 

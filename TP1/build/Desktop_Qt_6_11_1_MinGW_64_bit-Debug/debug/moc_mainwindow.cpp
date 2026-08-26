@@ -39,12 +39,12 @@ template <> constexpr inline auto MainWindow::qt_create_metaobjectdata<qt_meta_t
     namespace QMC = QtMocConstants;
     QtMocHelpers::StringRefStorage qt_stringData {
         "MainWindow",
-        "on_LoginBtn_clicked",
+        "on_CambiarUsuarioBtn_clicked",
         ""
     };
 
     QtMocHelpers::UintData qt_methods {
-        // Slot 'on_LoginBtn_clicked'
+        // Slot 'on_CambiarUsuarioBtn_clicked'
         QtMocHelpers::SlotData<void()>(1, 2, QMC::AccessPrivate, QMetaType::Void),
     };
     QtMocHelpers::UintData qt_properties {
@@ -69,7 +69,7 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
     auto *_t = static_cast<MainWindow *>(_o);
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
-        case 0: _t->on_LoginBtn_clicked(); break;
+        case 0: _t->on_CambiarUsuarioBtn_clicked(); break;
         default: ;
         }
     }

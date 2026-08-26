@@ -1,4 +1,5 @@
 #include "login.h"
+#include "mainwindow.h"
 #include "ui_login.h"
 #include <QMessageBox>
 
@@ -19,14 +20,19 @@ void LogIn::on_IngresarBtn_clicked()
     QString usuario = ui->Usuario->text();
     QString contrasena = ui->Clave->text();
 
+
     if (usuario == "grupo6" && contrasena == "utnfrh")
     {
-        QMessageBox::information(this, "Éxito", "Ingreso correcto");
+        MainWindow *ventanaPrincipal = new MainWindow();
+        ventanaPrincipal->setAttribute(Qt::WA_DeleteOnClose);
+        ventanaPrincipal->show();
 
+        this->close();
     }
     else
     {
-        QMessageBox::warning(this, "Error", "Usuario o contraseña incorrectos");
+        QMessageBox::warning(this, "Error", "Usuario o contraseña incorrectos, intente nuevamente");
     }
 }
+
 

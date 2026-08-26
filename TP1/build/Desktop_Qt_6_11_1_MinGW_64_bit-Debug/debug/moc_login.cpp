@@ -39,13 +39,16 @@ template <> constexpr inline auto LogIn::qt_create_metaobjectdata<qt_meta_tag_ZN
     namespace QMC = QtMocConstants;
     QtMocHelpers::StringRefStorage qt_stringData {
         "LogIn",
-        "on_IngresarBtn_clicked",
-        ""
+        "loginExitoso",
+        "",
+        "on_IngresarBtn_clicked"
     };
 
     QtMocHelpers::UintData qt_methods {
+        // Signal 'loginExitoso'
+        QtMocHelpers::SignalData<void()>(1, 2, QMC::AccessPublic, QMetaType::Void),
         // Slot 'on_IngresarBtn_clicked'
-        QtMocHelpers::SlotData<void()>(1, 2, QMC::AccessPrivate, QMetaType::Void),
+        QtMocHelpers::SlotData<void()>(3, 2, QMC::AccessPrivate, QMetaType::Void),
     };
     QtMocHelpers::UintData qt_properties {
     };
@@ -69,11 +72,15 @@ void LogIn::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void 
     auto *_t = static_cast<LogIn *>(_o);
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
-        case 0: _t->on_IngresarBtn_clicked(); break;
+        case 0: _t->loginExitoso(); break;
+        case 1: _t->on_IngresarBtn_clicked(); break;
         default: ;
         }
     }
-    (void)_a;
+    if (_c == QMetaObject::IndexOfMethod) {
+        if (QtMocHelpers::indexOfMethod<void (LogIn::*)()>(_a, &LogIn::loginExitoso, 0))
+            return;
+    }
 }
 
 const QMetaObject *LogIn::metaObject() const
@@ -95,15 +102,21 @@ int LogIn::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 1)
+        if (_id < 2)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 1;
+        _id -= 2;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 1)
+        if (_id < 2)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 1;
+        _id -= 2;
     }
     return _id;
+}
+
+// SIGNAL 0
+void LogIn::loginExitoso()
+{
+    QMetaObject::activate(this, &staticMetaObject, 0, nullptr);
 }
 QT_WARNING_POP

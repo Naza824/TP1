@@ -23,7 +23,7 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralwidget;
-    QPushButton *LoginBtn;
+    QPushButton *CambiarUsuarioBtn;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -34,9 +34,9 @@ public:
         MainWindow->resize(800, 600);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
-        LoginBtn = new QPushButton(centralwidget);
-        LoginBtn->setObjectName("LoginBtn");
-        LoginBtn->setGeometry(QRect(350, 290, 75, 24));
+        CambiarUsuarioBtn = new QPushButton(centralwidget);
+        CambiarUsuarioBtn->setObjectName("CambiarUsuarioBtn");
+        CambiarUsuarioBtn->setGeometry(QRect(20, 120, 121, 24));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
@@ -54,7 +54,7 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
-        LoginBtn->setText(QCoreApplication::translate("MainWindow", "Iniciar sesion", nullptr));
+        CambiarUsuarioBtn->setText(QCoreApplication::translate("MainWindow", "Cambiar Usuario", nullptr));
     } // retranslateUi
 
 };
