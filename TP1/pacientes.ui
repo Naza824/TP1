@@ -6,81 +6,107 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>655</width>
-    <height>373</height>
+    <width>285</width>
+    <height>272</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QWidget" name="gridLayoutWidget_2">
-   <property name="geometry">
-    <rect>
-     <x>380</x>
-     <y>90</y>
-     <width>160</width>
-     <height>138</height>
-    </rect>
-   </property>
-   <layout class="QGridLayout" name="gridLayout_2">
-    <item row="4" column="0">
-     <widget class="QPushButton" name="pushButton_8">
-      <property name="text">
-       <string>Mostrar atendidos</string>
-      </property>
-     </widget>
-    </item>
-    <item row="3" column="0">
-     <widget class="QPushButton" name="pushButton_7">
-      <property name="text">
-       <string>Atender siguiente</string>
-      </property>
-     </widget>
-    </item>
-    <item row="1" column="0">
-     <widget class="QPushButton" name="pushButton_4">
-      <property name="text">
-       <string>Mostrar sin atender</string>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="0">
-     <widget class="QPushButton" name="pushButton_6">
-      <property name="text">
-       <string>Mostrar siguiente</string>
-      </property>
-     </widget>
-    </item>
-   </layout>
-  </widget>
-  <widget class="QLabel" name="label_5">
-   <property name="geometry">
-    <rect>
-     <x>7</x>
-     <y>0</y>
-     <width>641</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Pacientes</string>
-   </property>
-  </widget>
-  <widget class="QWidget" name="horizontalLayoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>60</y>
-     <width>171</width>
-     <height>301</height>
-    </rect>
-   </property>
-   <layout class="QHBoxLayout" name="horizontalLayout">
-    <item>
-     <widget class="QTextBrowser" name="textBrowser"/>
-    </item>
-   </layout>
-  </widget>
+  <layout class="QGridLayout" name="gridLayout_2">
+   <item row="0" column="0">
+    <widget class="QGroupBox" name="groupBox">
+     <property name="title">
+      <string>GroupBox</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="2" column="1">
+       <widget class="QLineEdit" name="lineEdit_3"/>
+      </item>
+      <item row="7" column="0">
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>DNI</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>Apellido</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QLineEdit" name="lineEdit_5"/>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="label_5">
+        <property name="text">
+         <string>Edad</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0">
+       <widget class="QLabel" name="label_3">
+        <property name="text">
+         <string>Genero</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="lineEdit_2"/>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_4">
+        <property name="text">
+         <string>Nombre</string>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="1">
+       <widget class="QLineEdit" name="lineEdit_4">
+        <property name="placeholderText">
+         <string>Colocar solo numeros</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="QComboBox" name="comboBox">
+        <property name="currentIndex">
+         <number>-1</number>
+        </property>
+        <property name="placeholderText">
+         <string>Seleccionar</string>
+        </property>
+        <item>
+         <property name="text">
+          <string>Masculino</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Femenino</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Otros</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QPushButton" name="IngresarBtn">
+     <property name="text">
+      <string>Ingresar Paciente al sistema</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
  </widget>
  <resources/>
  <connections/>

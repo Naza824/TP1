@@ -8,7 +8,13 @@ Pacientes::Pacientes(QWidget *parent)
     ui->setupUi(this);
 }
 
+
+
 Pacientes::~Pacientes()
 {
     delete ui;
+}
+
+void Pacientes::on_IngresarBtn_clicked(){
+
 }

@@ -15,8 +15,16 @@ public:
     explicit Pacientes(QWidget *parent = nullptr);
     ~Pacientes();
 
+private slots:
+    void on_IngresarBtn_clicked();
+
 private:
     Ui::Pacientes *ui;
+    QString nombre;
+    QString apellido;
+    uint8_t edad;
+    QString genero;
+    int dni;
 };
 
 #endif // PACIENTES_H

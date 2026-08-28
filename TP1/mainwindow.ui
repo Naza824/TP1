@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>709</width>
+    <height>377</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,8 +17,8 @@
    <widget class="QPushButton" name="CambiarUsuarioBtn">
     <property name="geometry">
      <rect>
-      <x>0</x>
-      <y>50</y>
+      <x>20</x>
+      <y>20</y>
       <width>121</width>
       <height>24</height>
      </rect>
@@ -27,81 +27,70 @@
      <string>Cambiar Usuario</string>
     </property>
    </widget>
-   <widget class="QWidget" name="gridLayoutWidget">
+   <widget class="QPushButton" name="CargaPaciente">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>310</y>
-      <width>160</width>
-      <height>125</height>
+      <x>10</x>
+      <y>170</y>
+      <width>158</width>
+      <height>24</height>
      </rect>
     </property>
-    <layout class="QGridLayout" name="gridLayout">
-     <item row="0" column="0">
-      <widget class="QLabel" name="label">
-       <property name="text">
-        <string>Nuevo paciente</string>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="0">
-      <widget class="QPushButton" name="CargaPaciente">
-       <property name="text">
-        <string>Ingresar</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="0">
-      <widget class="QTextEdit" name="textEdit"/>
-     </item>
-    </layout>
+    <property name="text">
+     <string>Ingresar paciente</string>
+    </property>
    </widget>
-   <widget class="QWidget" name="gridLayoutWidget_2">
+   <widget class="QPushButton" name="pushButton_4">
     <property name="geometry">
      <rect>
-      <x>320</x>
-      <y>310</y>
-      <width>160</width>
-      <height>138</height>
+      <x>200</x>
+      <y>170</y>
+      <width>158</width>
+      <height>24</height>
      </rect>
     </property>
-    <layout class="QGridLayout" name="gridLayout_2">
-     <item row="3" column="0">
-      <widget class="QPushButton" name="pushButton_7">
-       <property name="text">
-        <string>Atender siguiente</string>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="0">
-      <widget class="QPushButton" name="pushButton_6">
-       <property name="text">
-        <string>Mostrar siguiente</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="0">
-      <widget class="QPushButton" name="pushButton_4">
-       <property name="text">
-        <string>Mostrar sin atender</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="0">
-      <widget class="QLabel" name="label_5">
-       <property name="text">
-        <string>Pacientes</string>
-       </property>
-      </widget>
-     </item>
-     <item row="4" column="0">
-      <widget class="QPushButton" name="pushButton_8">
-       <property name="text">
-        <string>Mostrar atendidos</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
+    <property name="text">
+     <string>Mostrar sin atender</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_6">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>260</y>
+      <width>158</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Mostrar siguiente</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_7">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>170</y>
+      <width>158</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Atender siguiente</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_8">
+    <property name="geometry">
+     <rect>
+      <x>540</x>
+      <y>170</y>
+      <width>158</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Mostrar atendidos</string>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -109,8 +98,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
-     <height>22</height>
+     <width>709</width>
+     <height>25</height>
     </rect>
    </property>
   </widget>

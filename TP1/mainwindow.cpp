@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "login.h"
+#include "pacientes.h"
 #include <QMessageBox>
 
 MainWindow::MainWindow(QWidget *parent)
@@ -28,6 +29,8 @@ void MainWindow::on_CambiarUsuarioBtn_clicked()
 
 void MainWindow::on_CargaPaciente_clicked()
 {
-
+    Pacientes *ventanaPacientes = new Pacientes();
+    ventanaPacientes->setAttribute(Qt::WA_DeleteOnClose);
+    ventanaPacientes->show();
 }
 

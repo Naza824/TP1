@@ -10,17 +10,20 @@ SOURCES += \
     login.cpp \
     main.cpp \
     mainwindow.cpp \
-    pacientes.cpp
+    pacientes.cpp \
+    psa.cpp
 
 HEADERS += \
     login.h \
     mainwindow.h \
-    pacientes.h
+    pacientes.h \
+    psa.h
 
 FORMS += \
     login.ui \
     mainwindow.ui \
-    pacientes.ui
+    pacientes.ui \
+    psa.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
