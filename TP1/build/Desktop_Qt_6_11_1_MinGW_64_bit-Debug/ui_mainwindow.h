@@ -11,10 +11,12 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QGridLayout>
+#include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QMainWindow>
-#include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
+#include <QtWidgets/QTextBrowser>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -23,45 +25,75 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralwidget;
+    QGridLayout *gridLayout;
     QPushButton *CambiarUsuarioBtn;
+    QHBoxLayout *horizontalLayout_2;
     QPushButton *CargaPaciente;
-    QPushButton *pushButton_4;
-    QPushButton *pushButton_6;
-    QPushButton *pushButton_7;
-    QPushButton *pushButton_8;
-    QMenuBar *menubar;
+    QPushButton *PSABtn;
+    QPushButton *AtenderBtn;
+    QPushButton *AtendidosBtn;
+    QGridLayout *gridLayout_3;
+    QPushButton *SiguientePacienteBtn;
+    QTextBrowser *textBrowser;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *MainWindow)
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
-        MainWindow->resize(709, 377);
+        MainWindow->resize(1066, 521);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
+        gridLayout = new QGridLayout(centralwidget);
+        gridLayout->setObjectName("gridLayout");
         CambiarUsuarioBtn = new QPushButton(centralwidget);
         CambiarUsuarioBtn->setObjectName("CambiarUsuarioBtn");
-        CambiarUsuarioBtn->setGeometry(QRect(20, 20, 121, 24));
+
+        gridLayout->addWidget(CambiarUsuarioBtn, 0, 1, 1, 1);
+
+        horizontalLayout_2 = new QHBoxLayout();
+        horizontalLayout_2->setObjectName("horizontalLayout_2");
         CargaPaciente = new QPushButton(centralwidget);
         CargaPaciente->setObjectName("CargaPaciente");
-        CargaPaciente->setGeometry(QRect(10, 170, 158, 24));
-        pushButton_4 = new QPushButton(centralwidget);
-        pushButton_4->setObjectName("pushButton_4");
-        pushButton_4->setGeometry(QRect(200, 170, 158, 24));
-        pushButton_6 = new QPushButton(centralwidget);
-        pushButton_6->setObjectName("pushButton_6");
-        pushButton_6->setGeometry(QRect(260, 260, 158, 24));
-        pushButton_7 = new QPushButton(centralwidget);
-        pushButton_7->setObjectName("pushButton_7");
-        pushButton_7->setGeometry(QRect(370, 170, 158, 24));
-        pushButton_8 = new QPushButton(centralwidget);
-        pushButton_8->setObjectName("pushButton_8");
-        pushButton_8->setGeometry(QRect(540, 170, 158, 24));
+
+        horizontalLayout_2->addWidget(CargaPaciente);
+
+        PSABtn = new QPushButton(centralwidget);
+        PSABtn->setObjectName("PSABtn");
+
+        horizontalLayout_2->addWidget(PSABtn);
+
+        AtenderBtn = new QPushButton(centralwidget);
+        AtenderBtn->setObjectName("AtenderBtn");
+
+        horizontalLayout_2->addWidget(AtenderBtn);
+
+        AtendidosBtn = new QPushButton(centralwidget);
+        AtendidosBtn->setObjectName("AtendidosBtn");
+
+        horizontalLayout_2->addWidget(AtendidosBtn);
+
+
+        gridLayout->addLayout(horizontalLayout_2, 1, 0, 1, 2);
+
+        gridLayout_3 = new QGridLayout();
+        gridLayout_3->setObjectName("gridLayout_3");
+        gridLayout_3->setVerticalSpacing(1);
+        gridLayout_3->setContentsMargins(7, -1, -1, -1);
+        SiguientePacienteBtn = new QPushButton(centralwidget);
+        SiguientePacienteBtn->setObjectName("SiguientePacienteBtn");
+
+        gridLayout_3->addWidget(SiguientePacienteBtn, 0, 0, 1, 1);
+
+        textBrowser = new QTextBrowser(centralwidget);
+        textBrowser->setObjectName("textBrowser");
+
+        gridLayout_3->addWidget(textBrowser, 1, 0, 1, 1);
+
+
+        gridLayout->addLayout(gridLayout_3, 2, 0, 1, 2);
+
         MainWindow->setCentralWidget(centralwidget);
-        menubar = new QMenuBar(MainWindow);
-        menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 709, 25));
-        MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName("statusbar");
         MainWindow->setStatusBar(statusbar);
@@ -76,10 +108,10 @@ public:
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
         CambiarUsuarioBtn->setText(QCoreApplication::translate("MainWindow", "Cambiar Usuario", nullptr));
         CargaPaciente->setText(QCoreApplication::translate("MainWindow", "Ingresar paciente", nullptr));
-        pushButton_4->setText(QCoreApplication::translate("MainWindow", "Mostrar sin atender", nullptr));
-        pushButton_6->setText(QCoreApplication::translate("MainWindow", "Mostrar siguiente", nullptr));
-        pushButton_7->setText(QCoreApplication::translate("MainWindow", "Atender siguiente", nullptr));
-        pushButton_8->setText(QCoreApplication::translate("MainWindow", "Mostrar atendidos", nullptr));
+        PSABtn->setText(QCoreApplication::translate("MainWindow", "Mostrar sin atender", nullptr));
+        AtenderBtn->setText(QCoreApplication::translate("MainWindow", "Atender siguiente", nullptr));
+        AtendidosBtn->setText(QCoreApplication::translate("MainWindow", "Mostrar atendidos", nullptr));
+        SiguientePacienteBtn->setText(QCoreApplication::translate("MainWindow", "Mostrar siguiente", nullptr));
     } // retranslateUi
 
 };

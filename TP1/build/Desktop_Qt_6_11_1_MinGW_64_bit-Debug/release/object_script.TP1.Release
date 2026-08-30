@@ -1,0 +1,11 @@
+release/login.o
+release/main.o
+release/mainwindow.o
+release/pacientes.o
+release/pacientes_atendidos.o
+release/psa.o
+release/moc_login.o
+release/moc_mainwindow.o
+release/moc_pacientes.o
+release/moc_pacientes_atendidos.o
+release/moc_psa.o

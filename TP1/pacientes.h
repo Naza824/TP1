@@ -1,6 +1,7 @@
 #ifndef PACIENTES_H
 #define PACIENTES_H
 
+
 #include <QDialog>
 
 namespace Ui {
@@ -14,6 +15,7 @@ class Pacientes : public QDialog
 public:
     explicit Pacientes(QWidget *parent = nullptr);
     ~Pacientes();
+
 
 private slots:
     void on_IngresarBtn_clicked();

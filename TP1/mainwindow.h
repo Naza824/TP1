@@ -26,6 +26,14 @@ private slots:
 
     void on_CargaPaciente_clicked();
 
+    void on_PSABtn_clicked();
+
+    void on_AtenderBtn_clicked();
+
+    void on_AtendidosBtn_clicked();
+
+    void on_SiguientePacienteBtn_clicked();
+
 private:
     Ui::MainWindow *ui;
 };

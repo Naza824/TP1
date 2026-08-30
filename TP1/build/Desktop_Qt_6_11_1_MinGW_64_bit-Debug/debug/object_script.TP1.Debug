@@ -1,0 +1,11 @@
+debug/login.o
+debug/main.o
+debug/mainwindow.o
+debug/pacientes.o
+debug/pacientes_atendidos.o
+debug/psa.o
+debug/moc_login.o
+debug/moc_mainwindow.o
+debug/moc_pacientes.o
+debug/moc_pacientes_atendidos.o
+debug/moc_psa.o

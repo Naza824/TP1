@@ -27,16 +27,16 @@ public:
     QGridLayout *gridLayout_2;
     QGroupBox *groupBox;
     QGridLayout *gridLayout;
-    QLineEdit *lineEdit_3;
+    QLineEdit *lineApellido;
     QLabel *label;
     QLabel *label_2;
-    QLineEdit *lineEdit_5;
+    QLineEdit *lineEdad;
     QLabel *label_5;
     QLabel *label_3;
-    QLineEdit *lineEdit_2;
+    QLineEdit *lineNombre;
     QLabel *label_4;
-    QLineEdit *lineEdit_4;
-    QComboBox *comboBox;
+    QLineEdit *lineDNI;
+    QComboBox *cBGenero;
     QPushButton *IngresarBtn;
 
     void setupUi(QDialog *Pacientes)
@@ -50,10 +50,10 @@ public:
         groupBox->setObjectName("groupBox");
         gridLayout = new QGridLayout(groupBox);
         gridLayout->setObjectName("gridLayout");
-        lineEdit_3 = new QLineEdit(groupBox);
-        lineEdit_3->setObjectName("lineEdit_3");
+        lineApellido = new QLineEdit(groupBox);
+        lineApellido->setObjectName("lineApellido");
 
-        gridLayout->addWidget(lineEdit_3, 2, 1, 1, 1);
+        gridLayout->addWidget(lineApellido, 2, 1, 1, 1);
 
         label = new QLabel(groupBox);
         label->setObjectName("label");
@@ -65,10 +65,10 @@ public:
 
         gridLayout->addWidget(label_2, 2, 0, 1, 1);
 
-        lineEdit_5 = new QLineEdit(groupBox);
-        lineEdit_5->setObjectName("lineEdit_5");
+        lineEdad = new QLineEdit(groupBox);
+        lineEdad->setObjectName("lineEdad");
 
-        gridLayout->addWidget(lineEdit_5, 3, 1, 1, 1);
+        gridLayout->addWidget(lineEdad, 3, 1, 1, 1);
 
         label_5 = new QLabel(groupBox);
         label_5->setObjectName("label_5");
@@ -80,28 +80,28 @@ public:
 
         gridLayout->addWidget(label_3, 4, 0, 1, 1);
 
-        lineEdit_2 = new QLineEdit(groupBox);
-        lineEdit_2->setObjectName("lineEdit_2");
+        lineNombre = new QLineEdit(groupBox);
+        lineNombre->setObjectName("lineNombre");
 
-        gridLayout->addWidget(lineEdit_2, 0, 1, 1, 1);
+        gridLayout->addWidget(lineNombre, 0, 1, 1, 1);
 
         label_4 = new QLabel(groupBox);
         label_4->setObjectName("label_4");
 
         gridLayout->addWidget(label_4, 0, 0, 1, 1);
 
-        lineEdit_4 = new QLineEdit(groupBox);
-        lineEdit_4->setObjectName("lineEdit_4");
+        lineDNI = new QLineEdit(groupBox);
+        lineDNI->setObjectName("lineDNI");
 
-        gridLayout->addWidget(lineEdit_4, 7, 1, 1, 1);
+        gridLayout->addWidget(lineDNI, 7, 1, 1, 1);
 
-        comboBox = new QComboBox(groupBox);
-        comboBox->addItem(QString());
-        comboBox->addItem(QString());
-        comboBox->addItem(QString());
-        comboBox->setObjectName("comboBox");
+        cBGenero = new QComboBox(groupBox);
+        cBGenero->addItem(QString());
+        cBGenero->addItem(QString());
+        cBGenero->addItem(QString());
+        cBGenero->setObjectName("cBGenero");
 
-        gridLayout->addWidget(comboBox, 4, 1, 1, 1);
+        gridLayout->addWidget(cBGenero, 4, 1, 1, 1);
 
 
         gridLayout_2->addWidget(groupBox, 0, 0, 1, 1);
@@ -114,7 +114,7 @@ public:
 
         retranslateUi(Pacientes);
 
-        comboBox->setCurrentIndex(-1);
+        cBGenero->setCurrentIndex(-1);
 
 
         QMetaObject::connectSlotsByName(Pacientes);
@@ -123,18 +123,22 @@ public:
     void retranslateUi(QDialog *Pacientes)
     {
         Pacientes->setWindowTitle(QCoreApplication::translate("Pacientes", "Dialog", nullptr));
-        groupBox->setTitle(QCoreApplication::translate("Pacientes", "GroupBox", nullptr));
+        groupBox->setTitle(QCoreApplication::translate("Pacientes", "Datos del paciente", nullptr));
+        lineApellido->setInputMask(QCoreApplication::translate("Pacientes", "AAAAAAAAAAAAAAAAAAAA", nullptr));
         label->setText(QCoreApplication::translate("Pacientes", "DNI", nullptr));
         label_2->setText(QCoreApplication::translate("Pacientes", "Apellido", nullptr));
+        lineEdad->setInputMask(QCoreApplication::translate("Pacientes", "999", nullptr));
         label_5->setText(QCoreApplication::translate("Pacientes", "Edad", nullptr));
         label_3->setText(QCoreApplication::translate("Pacientes", "Genero", nullptr));
+        lineNombre->setInputMask(QCoreApplication::translate("Pacientes", "AAAAAAAAAAAAAAAAAAAA", nullptr));
         label_4->setText(QCoreApplication::translate("Pacientes", "Nombre", nullptr));
-        lineEdit_4->setPlaceholderText(QCoreApplication::translate("Pacientes", "Colocar solo numeros", nullptr));
-        comboBox->setItemText(0, QCoreApplication::translate("Pacientes", "Masculino", nullptr));
-        comboBox->setItemText(1, QCoreApplication::translate("Pacientes", "Femenino", nullptr));
-        comboBox->setItemText(2, QCoreApplication::translate("Pacientes", "Otros", nullptr));
+        lineDNI->setInputMask(QCoreApplication::translate("Pacientes", "99999999", nullptr));
+        lineDNI->setPlaceholderText(QCoreApplication::translate("Pacientes", "Colocar solo numeros", nullptr));
+        cBGenero->setItemText(0, QCoreApplication::translate("Pacientes", "Masculino", nullptr));
+        cBGenero->setItemText(1, QCoreApplication::translate("Pacientes", "Femenino", nullptr));
+        cBGenero->setItemText(2, QCoreApplication::translate("Pacientes", "Otros", nullptr));
 
-        comboBox->setPlaceholderText(QCoreApplication::translate("Pacientes", "Seleccionar", nullptr));
+        cBGenero->setPlaceholderText(QCoreApplication::translate("Pacientes", "Seleccionar", nullptr));
         IngresarBtn->setText(QCoreApplication::translate("Pacientes", "Ingresar Paciente al sistema", nullptr));
     } // retranslateUi
 

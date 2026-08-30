@@ -12,18 +12,29 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDialog>
+#include <QtWidgets/QGridLayout>
+#include <QtWidgets/QTextBrowser>
 
 QT_BEGIN_NAMESPACE
 
 class Ui_PSA
 {
 public:
+    QGridLayout *gridLayout;
+    QTextBrowser *ListaPSA;
 
     void setupUi(QDialog *PSA)
     {
         if (PSA->objectName().isEmpty())
             PSA->setObjectName("PSA");
-        PSA->resize(400, 300);
+        PSA->resize(382, 312);
+        gridLayout = new QGridLayout(PSA);
+        gridLayout->setObjectName("gridLayout");
+        ListaPSA = new QTextBrowser(PSA);
+        ListaPSA->setObjectName("ListaPSA");
+
+        gridLayout->addWidget(ListaPSA, 0, 0, 1, 1);
+
 
         retranslateUi(PSA);
 

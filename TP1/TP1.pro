@@ -11,18 +11,21 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     pacientes.cpp \
+    pacientes_atendidos.cpp \
     psa.cpp
 
 HEADERS += \
     login.h \
     mainwindow.h \
     pacientes.h \
+    pacientes_atendidos.h \
     psa.h
 
 FORMS += \
     login.ui \
     mainwindow.ui \
     pacientes.ui \
+    pacientes_atendidos.ui \
     psa.ui
 
 # Default rules for deployment.

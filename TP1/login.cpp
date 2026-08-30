@@ -21,7 +21,7 @@ void LogIn::on_IngresarBtn_clicked()
     QString contrasena = ui->Clave->text();
 
 
-    if (usuario == "grupo6" && contrasena == "utnfrh")
+    if (usuario == "1" && contrasena == "1") //QUE EL ULTIMO CAMBIE ESTO
     {
         MainWindow *ventanaPrincipal = new MainWindow();
         ventanaPrincipal->setAttribute(Qt::WA_DeleteOnClose);
