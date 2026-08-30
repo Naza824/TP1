@@ -2,7 +2,6 @@
 #include "login.h"
 
 #include <QApplication>
-int a;
 
 int main(int argc, char *argv[])
 {
