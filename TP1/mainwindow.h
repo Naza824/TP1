@@ -2,7 +2,9 @@
 #define MAINWINDOW_H
 
 #include "login.h"
+#include "pacientes.h"
 #include <QMainWindow>
+#include <queue>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -36,5 +38,7 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+    std::queue<Paciente>pacientesSinAtender;
+    std::queue<Paciente>pacientesAtendidos;
 };
 #endif // MAINWINDOW_H

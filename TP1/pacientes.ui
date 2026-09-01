@@ -7,11 +7,11 @@
     <x>0</x>
     <y>0</y>
     <width>285</width>
-    <height>272</height>
+    <height>277</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Cargar paciente</string>
   </property>
   <layout class="QGridLayout" name="gridLayout_2">
    <item row="0" column="0">
@@ -96,17 +96,17 @@
         </property>
         <item>
          <property name="text">
-          <string>Masculino</string>
+          <string>M</string>
          </property>
         </item>
         <item>
          <property name="text">
-          <string>Femenino</string>
+          <string>F</string>
          </property>
         </item>
         <item>
          <property name="text">
-          <string>Otros</string>
+          <string>O</string>
          </property>
         </item>
        </widget>

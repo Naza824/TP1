@@ -1,9 +1,17 @@
 #ifndef PACIENTES_H
 #define PACIENTES_H
 
-
+#include <queue>
 #include <QDialog>
+#include <QString>
 
+struct Paciente{
+    QString nombre;
+    QString apellido;
+    int edad;
+    char genero;
+    int dni;
+};
 namespace Ui {
 class Pacientes;
 }
@@ -13,7 +21,7 @@ class Pacientes : public QDialog
     Q_OBJECT
 
 public:
-    explicit Pacientes(QWidget *parent = nullptr);
+    explicit Pacientes(std::queue<Paciente>&cola, QWidget *parent = nullptr);
     ~Pacientes();
 
 
@@ -24,9 +32,10 @@ private:
     Ui::Pacientes *ui;
     QString nombre;
     QString apellido;
-    uint8_t edad;
-    QString genero;
+    int  edad;
+    char genero;
     int dni;
+    std::queue<Paciente>&cola;
 };
 
 #endif // PACIENTES_H

@@ -11,15 +11,15 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Usuario</string>
   </property>
   <widget class="QWidget" name="gridLayoutWidget">
    <property name="geometry">
     <rect>
      <x>160</x>
-     <y>100</y>
+     <y>120</y>
      <width>241</width>
-     <height>141</height>
+     <height>155</height>
     </rect>
    </property>
    <layout class="QGridLayout" name="gridLayout">
