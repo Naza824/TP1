@@ -34,7 +34,7 @@ public:
     QPushButton *AtendidosBtn;
     QGridLayout *gridLayout_3;
     QPushButton *SiguientePacienteBtn;
-    QTextBrowser *textBrowser;
+    QTextBrowser *textBrowsermw;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *MainWindow)
@@ -85,10 +85,10 @@ public:
 
         gridLayout_3->addWidget(SiguientePacienteBtn, 0, 0, 1, 1);
 
-        textBrowser = new QTextBrowser(centralwidget);
-        textBrowser->setObjectName("textBrowser");
+        textBrowsermw = new QTextBrowser(centralwidget);
+        textBrowsermw->setObjectName("textBrowsermw");
 
-        gridLayout_3->addWidget(textBrowser, 1, 0, 1, 1);
+        gridLayout_3->addWidget(textBrowsermw, 1, 0, 1, 1);
 
 
         gridLayout->addLayout(gridLayout_3, 2, 0, 1, 2);

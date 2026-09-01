@@ -38,7 +38,7 @@ public:
         LogIn->resize(581, 378);
         gridLayoutWidget = new QWidget(LogIn);
         gridLayoutWidget->setObjectName("gridLayoutWidget");
-        gridLayoutWidget->setGeometry(QRect(160, 100, 241, 141));
+        gridLayoutWidget->setGeometry(QRect(160, 120, 241, 155));
         gridLayout = new QGridLayout(gridLayoutWidget);
         gridLayout->setObjectName("gridLayout");
         gridLayout->setContentsMargins(0, 0, 0, 0);
@@ -81,7 +81,7 @@ public:
 
     void retranslateUi(QDialog *LogIn)
     {
-        LogIn->setWindowTitle(QCoreApplication::translate("LogIn", "Dialog", nullptr));
+        LogIn->setWindowTitle(QCoreApplication::translate("LogIn", "Usuario", nullptr));
         label_2->setText(QCoreApplication::translate("LogIn", "Clave", nullptr));
         IngresarBtn->setText(QCoreApplication::translate("LogIn", "Ingresar", nullptr));
         label->setText(QCoreApplication::translate("LogIn", "Nombre", nullptr));

@@ -3,6 +3,7 @@
 #include <QString>
 #include <QMessageBox>
 #include <cstring>
+#include <QRegularExpressionValidator>
 
 Pacientes::Pacientes(std::queue<Paciente>& cola,QWidget *parent)
     : QDialog(parent)
@@ -10,6 +11,9 @@ Pacientes::Pacientes(std::queue<Paciente>& cola,QWidget *parent)
     ,cola(cola)
 {
     ui->setupUi(this);
+    QRegularExpression regexNombre("[a-zA-ZáéíóúÁÉÍÓÚñÑ\\s]{1,30}");
+    ui->lineNombre->setValidator(new QRegularExpressionValidator(regexNombre, this));
+    ui->lineApellido->setValidator(new QRegularExpressionValidator(regexNombre, this));
 }
 
 Pacientes::~Pacientes()
@@ -70,7 +74,6 @@ void Pacientes::on_IngresarBtn_clicked(){
     else if (generoTexto == "O"){
         genero = 'O';
     }
-
     Paciente nuevo;
     nuevo.nombre= nombre;
     nuevo.apellido= apellido;

@@ -43,7 +43,7 @@ public:
     {
         if (Pacientes->objectName().isEmpty())
             Pacientes->setObjectName("Pacientes");
-        Pacientes->resize(285, 272);
+        Pacientes->resize(285, 277);
         gridLayout_2 = new QGridLayout(Pacientes);
         gridLayout_2->setObjectName("gridLayout_2");
         groupBox = new QGroupBox(Pacientes);
@@ -122,21 +122,21 @@ public:
 
     void retranslateUi(QDialog *Pacientes)
     {
-        Pacientes->setWindowTitle(QCoreApplication::translate("Pacientes", "Dialog", nullptr));
+        Pacientes->setWindowTitle(QCoreApplication::translate("Pacientes", "Cargar paciente", nullptr));
         groupBox->setTitle(QCoreApplication::translate("Pacientes", "Datos del paciente", nullptr));
-        lineApellido->setInputMask(QCoreApplication::translate("Pacientes", "AAAAAAAAAAAAAAAAAAAA", nullptr));
+        lineApellido->setInputMask(QString());
         label->setText(QCoreApplication::translate("Pacientes", "DNI", nullptr));
         label_2->setText(QCoreApplication::translate("Pacientes", "Apellido", nullptr));
         lineEdad->setInputMask(QCoreApplication::translate("Pacientes", "999", nullptr));
         label_5->setText(QCoreApplication::translate("Pacientes", "Edad", nullptr));
         label_3->setText(QCoreApplication::translate("Pacientes", "Genero", nullptr));
-        lineNombre->setInputMask(QCoreApplication::translate("Pacientes", "AAAAAAAAAAAAAAAAAAAA", nullptr));
+        lineNombre->setInputMask(QString());
         label_4->setText(QCoreApplication::translate("Pacientes", "Nombre", nullptr));
         lineDNI->setInputMask(QCoreApplication::translate("Pacientes", "99999999", nullptr));
         lineDNI->setPlaceholderText(QCoreApplication::translate("Pacientes", "Colocar solo numeros", nullptr));
-        cBGenero->setItemText(0, QCoreApplication::translate("Pacientes", "Masculino", nullptr));
-        cBGenero->setItemText(1, QCoreApplication::translate("Pacientes", "Femenino", nullptr));
-        cBGenero->setItemText(2, QCoreApplication::translate("Pacientes", "Otros", nullptr));
+        cBGenero->setItemText(0, QCoreApplication::translate("Pacientes", "M", nullptr));
+        cBGenero->setItemText(1, QCoreApplication::translate("Pacientes", "F", nullptr));
+        cBGenero->setItemText(2, QCoreApplication::translate("Pacientes", "O", nullptr));
 
         cBGenero->setPlaceholderText(QCoreApplication::translate("Pacientes", "Seleccionar", nullptr));
         IngresarBtn->setText(QCoreApplication::translate("Pacientes", "Ingresar Paciente al sistema", nullptr));
