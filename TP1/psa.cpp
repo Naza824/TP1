@@ -11,6 +11,9 @@ PSA::PSA(std::queue<Paciente>& cola, QWidget *parent)
 
     std::queue<Paciente> copia = cola; //generamos una copia para no modificar la cola original
 
+    /* Pone los datos del paciente en un texto
+       y saca el paciente de la queue, luego
+       muestra el paciente en la ventana */
     if (copia.empty())
     {
         lista = "No hay pacientes sin atender.";

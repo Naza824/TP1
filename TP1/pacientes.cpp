@@ -21,6 +21,10 @@ Pacientes::~Pacientes()
     delete ui;
 }
 
+/* Funcion que comprueba si se ingresaron todos los datos y
+   valida el ingreso de edad y dni. Si  se ingresaron todos
+   los datos y son validados ingresa al  paciente al sistema
+   y luego muestra un mensaje de que se ingreso correctamente */
 void Pacientes::on_IngresarBtn_clicked(){
 
     nombre = ui->lineNombre->text();

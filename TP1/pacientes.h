@@ -5,6 +5,7 @@
 #include <QDialog>
 #include <QString>
 
+/* Estructura para guardar los datos de los pacientes */
 struct Paciente{
     QString nombre;
     QString apellido;

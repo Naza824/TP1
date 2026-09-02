@@ -16,6 +16,9 @@ Pacientes_atendidos::Pacientes_atendidos(std::queue<Paciente>& cola, QWidget *pa
         lista = "No hay pacientes atendidos.";
     }
 
+    /* Pone los datos del paciente en un texto
+       y saca el paciente de la queue, luego
+       muestra el paciente en la ventana */
     else {
         while(!copia.empty()){
             Paciente paciente = copia.front();
