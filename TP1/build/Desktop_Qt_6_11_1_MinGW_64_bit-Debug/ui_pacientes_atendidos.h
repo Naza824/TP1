@@ -10,6 +10,7 @@
 #define UI_PACIENTES_ATENDIDOS_H
 
 #include <QtCore/QVariant>
+#include <QtGui/QIcon>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QGridLayout>
@@ -28,6 +29,9 @@ public:
         if (Pacientes_atendidos->objectName().isEmpty())
             Pacientes_atendidos->setObjectName("Pacientes_atendidos");
         Pacientes_atendidos->resize(400, 300);
+        QIcon icon;
+        icon.addFile(QString::fromUtf8(":/imagenes/utn haedo logo.jpg"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        Pacientes_atendidos->setWindowIcon(icon);
         gridLayout = new QGridLayout(Pacientes_atendidos);
         gridLayout->setObjectName("gridLayout");
         textBrowserPA = new QTextBrowser(Pacientes_atendidos);

@@ -4,6 +4,7 @@ debug/mainwindow.o
 debug/pacientes.o
 debug/pacientes_atendidos.o
 debug/psa.o
+debug/qrc_resource.o
 debug/moc_login.o
 debug/moc_mainwindow.o
 debug/moc_pacientes.o

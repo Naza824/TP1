@@ -311,7 +311,8 @@ Makefile: ../../TP1.pro D:/QT/6.11.1/mingw_64/mkspecs/win32-g++/qmake.conf D:/QT
 		D:/QT/6.11.1/mingw_64/lib/Qt6Gui.prl \
 		D:/QT/6.11.1/mingw_64/lib/Qt6Core.prl \
 		D:/QT/6.11.1/mingw_64/lib/Qt6EntryPoint.prl \
-		D:/QT/6.11.1/mingw_64/mkspecs/features/build_pass.prf
+		D:/QT/6.11.1/mingw_64/mkspecs/features/build_pass.prf \
+		../../resource.qrc
 	$(QMAKE) -o Makefile ..\..\TP1.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
 D:/QT/6.11.1/mingw_64/mkspecs/features/spec_pre.prf:
 D:/QT/6.11.1/mingw_64/mkspecs/features/device_config.prf:
@@ -555,6 +556,7 @@ D:/QT/6.11.1/mingw_64/lib/Qt6Gui.prl:
 D:/QT/6.11.1/mingw_64/lib/Qt6Core.prl:
 D:/QT/6.11.1/mingw_64/lib/Qt6EntryPoint.prl:
 D:/QT/6.11.1/mingw_64/mkspecs/features/build_pass.prf:
+../../resource.qrc:
 qmake: FORCE
 	@$(QMAKE) -o Makefile ..\..\TP1.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
 

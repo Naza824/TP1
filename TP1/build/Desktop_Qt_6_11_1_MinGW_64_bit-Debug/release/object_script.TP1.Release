@@ -4,6 +4,7 @@ release/mainwindow.o
 release/pacientes.o
 release/pacientes_atendidos.o
 release/psa.o
+release/qrc_resource.o
 release/moc_login.o
 release/moc_mainwindow.o
 release/moc_pacientes.o

@@ -10,6 +10,7 @@
 #define UI_PACIENTES_H
 
 #include <QtCore/QVariant>
+#include <QtGui/QIcon>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QComboBox>
 #include <QtWidgets/QDialog>
@@ -44,6 +45,9 @@ public:
         if (Pacientes->objectName().isEmpty())
             Pacientes->setObjectName("Pacientes");
         Pacientes->resize(285, 277);
+        QIcon icon;
+        icon.addFile(QString::fromUtf8(":/imagenes/utn haedo logo.jpg"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        Pacientes->setWindowIcon(icon);
         gridLayout_2 = new QGridLayout(Pacientes);
         gridLayout_2->setObjectName("gridLayout_2");
         groupBox = new QGroupBox(Pacientes);
@@ -67,6 +71,7 @@ public:
 
         lineEdad = new QLineEdit(groupBox);
         lineEdad->setObjectName("lineEdad");
+        lineEdad->setClearButtonEnabled(false);
 
         gridLayout->addWidget(lineEdad, 3, 1, 1, 1);
 
@@ -108,6 +113,28 @@ public:
 
         IngresarBtn = new QPushButton(Pacientes);
         IngresarBtn->setObjectName("IngresarBtn");
+        QPalette palette;
+        QBrush brush(QColor(170, 255, 127, 255));
+        brush.setStyle(Qt::BrushStyle::SolidPattern);
+        palette.setBrush(QPalette::ColorGroup::Active, QPalette::ColorRole::Button, brush);
+        QBrush brush1(QColor(0, 0, 0, 255));
+        brush1.setStyle(Qt::BrushStyle::SolidPattern);
+        palette.setBrush(QPalette::ColorGroup::Active, QPalette::ColorRole::BrightText, brush1);
+        palette.setBrush(QPalette::ColorGroup::Active, QPalette::ColorRole::Base, brush);
+        palette.setBrush(QPalette::ColorGroup::Active, QPalette::ColorRole::Window, brush);
+        palette.setBrush(QPalette::ColorGroup::Active, QPalette::ColorRole::HighlightedText, brush1);
+        palette.setBrush(QPalette::ColorGroup::Inactive, QPalette::ColorRole::Button, brush);
+        palette.setBrush(QPalette::ColorGroup::Inactive, QPalette::ColorRole::BrightText, brush1);
+        palette.setBrush(QPalette::ColorGroup::Inactive, QPalette::ColorRole::Base, brush);
+        palette.setBrush(QPalette::ColorGroup::Inactive, QPalette::ColorRole::Window, brush);
+        palette.setBrush(QPalette::ColorGroup::Inactive, QPalette::ColorRole::HighlightedText, brush1);
+        palette.setBrush(QPalette::ColorGroup::Disabled, QPalette::ColorRole::Button, brush);
+        palette.setBrush(QPalette::ColorGroup::Disabled, QPalette::ColorRole::BrightText, brush1);
+        palette.setBrush(QPalette::ColorGroup::Disabled, QPalette::ColorRole::Base, brush);
+        palette.setBrush(QPalette::ColorGroup::Disabled, QPalette::ColorRole::Window, brush);
+        palette.setBrush(QPalette::ColorGroup::Disabled, QPalette::ColorRole::HighlightedText, brush1);
+        IngresarBtn->setPalette(palette);
+        IngresarBtn->setStyleSheet(QString::fromUtf8("background-color: rgb(170, 255, 127);"));
 
         gridLayout_2->addWidget(IngresarBtn, 1, 0, 1, 1);
 

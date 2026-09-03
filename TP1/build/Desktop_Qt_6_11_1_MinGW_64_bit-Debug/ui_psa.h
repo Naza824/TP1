@@ -10,6 +10,7 @@
 #define UI_PSA_H
 
 #include <QtCore/QVariant>
+#include <QtGui/QIcon>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QGridLayout>
@@ -28,6 +29,9 @@ public:
         if (PSA->objectName().isEmpty())
             PSA->setObjectName("PSA");
         PSA->resize(382, 312);
+        QIcon icon;
+        icon.addFile(QString::fromUtf8(":/imagenes/utn haedo logo.jpg"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        PSA->setWindowIcon(icon);
         gridLayout = new QGridLayout(PSA);
         gridLayout->setObjectName("gridLayout");
         ListaPSA = new QTextBrowser(PSA);

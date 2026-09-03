@@ -10,6 +10,7 @@
 #define UI_LOGIN_H
 
 #include <QtCore/QVariant>
+#include <QtGui/QIcon>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QGridLayout>
@@ -30,12 +31,16 @@ public:
     QPushButton *IngresarBtn;
     QLineEdit *Clave;
     QLabel *label;
+    QLabel *label_utn;
 
     void setupUi(QDialog *LogIn)
     {
         if (LogIn->objectName().isEmpty())
             LogIn->setObjectName("LogIn");
         LogIn->resize(581, 378);
+        QIcon icon;
+        icon.addFile(QString::fromUtf8(":/imagenes/utn haedo logo.jpg"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        LogIn->setWindowIcon(icon);
         gridLayoutWidget = new QWidget(LogIn);
         gridLayoutWidget->setObjectName("gridLayoutWidget");
         gridLayoutWidget->setGeometry(QRect(160, 120, 241, 155));
@@ -54,6 +59,35 @@ public:
 
         IngresarBtn = new QPushButton(gridLayoutWidget);
         IngresarBtn->setObjectName("IngresarBtn");
+        QPalette palette;
+        QBrush brush(QColor(170, 255, 127, 255));
+        brush.setStyle(Qt::BrushStyle::SolidPattern);
+        palette.setBrush(QPalette::ColorGroup::Active, QPalette::ColorRole::Button, brush);
+        QBrush brush1(QColor(0, 0, 0, 255));
+        brush1.setStyle(Qt::BrushStyle::SolidPattern);
+        palette.setBrush(QPalette::ColorGroup::Active, QPalette::ColorRole::BrightText, brush1);
+        palette.setBrush(QPalette::ColorGroup::Active, QPalette::ColorRole::Base, brush);
+        QBrush brush2(QColor(255, 255, 255, 255));
+        brush2.setStyle(Qt::BrushStyle::SolidPattern);
+        palette.setBrush(QPalette::ColorGroup::Active, QPalette::ColorRole::Window, brush2);
+        QBrush brush3(QColor(31, 155, 93, 255));
+        brush3.setStyle(Qt::BrushStyle::SolidPattern);
+        palette.setBrush(QPalette::ColorGroup::Active, QPalette::ColorRole::Highlight, brush3);
+        palette.setBrush(QPalette::ColorGroup::Active, QPalette::ColorRole::HighlightedText, brush1);
+        palette.setBrush(QPalette::ColorGroup::Inactive, QPalette::ColorRole::Button, brush);
+        palette.setBrush(QPalette::ColorGroup::Inactive, QPalette::ColorRole::BrightText, brush1);
+        palette.setBrush(QPalette::ColorGroup::Inactive, QPalette::ColorRole::Base, brush);
+        palette.setBrush(QPalette::ColorGroup::Inactive, QPalette::ColorRole::Window, brush2);
+        palette.setBrush(QPalette::ColorGroup::Inactive, QPalette::ColorRole::Highlight, brush3);
+        palette.setBrush(QPalette::ColorGroup::Inactive, QPalette::ColorRole::HighlightedText, brush1);
+        palette.setBrush(QPalette::ColorGroup::Disabled, QPalette::ColorRole::Button, brush);
+        palette.setBrush(QPalette::ColorGroup::Disabled, QPalette::ColorRole::BrightText, brush1);
+        palette.setBrush(QPalette::ColorGroup::Disabled, QPalette::ColorRole::Base, brush2);
+        palette.setBrush(QPalette::ColorGroup::Disabled, QPalette::ColorRole::Window, brush2);
+        palette.setBrush(QPalette::ColorGroup::Disabled, QPalette::ColorRole::Highlight, brush3);
+        palette.setBrush(QPalette::ColorGroup::Disabled, QPalette::ColorRole::HighlightedText, brush1);
+        IngresarBtn->setPalette(palette);
+        IngresarBtn->setStyleSheet(QString::fromUtf8("background-color: rgb(170, 255, 127);"));
 
         gridLayout->addWidget(IngresarBtn, 5, 0, 1, 1);
 
@@ -73,6 +107,12 @@ public:
 
         gridLayout->addWidget(label, 0, 0, 1, 1);
 
+        label_utn = new QLabel(LogIn);
+        label_utn->setObjectName("label_utn");
+        label_utn->setGeometry(QRect(220, 10, 131, 101));
+        label_utn->setMaximumSize(QSize(181, 101));
+        label_utn->setPixmap(QPixmap(QString::fromUtf8(":/imagenes/utn haedo logo.jpg")));
+        label_utn->setScaledContents(true);
 
         retranslateUi(LogIn);
 
@@ -85,6 +125,7 @@ public:
         label_2->setText(QCoreApplication::translate("LogIn", "Clave", nullptr));
         IngresarBtn->setText(QCoreApplication::translate("LogIn", "Ingresar", nullptr));
         label->setText(QCoreApplication::translate("LogIn", "Nombre", nullptr));
+        label_utn->setText(QString());
     } // retranslateUi
 
 };
